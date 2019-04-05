@@ -1,3 +1,4 @@
+
 <!doctype HTML>
 <html>
 <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
@@ -5,17 +6,17 @@
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script>
   <body style='margin : 0px; overflow: hidden;'>
     <a-scene stats embedded arjs='trackingMethod: best; debugUIEnabled: false'>
-    <a-assets>
-      <a-asset-item id="smiley" src="https://cdn.rawgit.com/KhronosGroup/glTF-Sample-Models/9176d098/1.0/SmilingFace/glTF/SmilingFace.gltf"></a-asset-item>
-    </a-assets>
   	<a-marker preset="hiro">
-      <a-entity gltf-model="#smiley" rotation= "180 0 0">
-        <a-animation attribute="position"
-          dur="5000"
-          direction="alternate"
-          from="0 1 0"
-          to="0 5 0"
+        <a-assets>
+            <a-asset-item id="CesiumMilkTruck" src="https://github.com/KhronosGroup/glTF-Sample-Models/tree/master/2.0/CesiumMilkTruck/glTF/CesiumMilkTruck.glTF"></a-asset-item>
+          </a-assets>
+        <a-animation attribute="rotation"
+          dur="2000"
+          fill="forwards"
+          from="0 0 0"
+          to="360 360 360"
           repeat="indefinite"></a-animation>
+      </a-box>
       </a-entity>
   	</a-marker>
   	<a-entity camera></a-entity>
